@@ -57,6 +57,7 @@
   "dependencies": {
     "@babel/polyfill": "^7.12.1",
     "@hot-loader/react-dom": "16.11.0",
+    "antd": "^4.19.5",
     "autoprefixer": "10.2.4",
     "chalk": "3.0.0",
     "compression": "1.7.4",

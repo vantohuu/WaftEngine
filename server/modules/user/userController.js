@@ -505,10 +505,11 @@ userController.ResetPassword = async (req, res, next) => {
 userController.Login = async (req, res, next) => {
   try {
     let errors = {};
+    
     const password = req.body.password;
     let email = req.body.email.toLowerCase();
     const user = await userSch.findOne({ email }).populate([{ path: 'roles', select: 'role_title' }]);
-
+    console.log(user);
     if (!user) {
       errors.email = 'User not found';
       return otherHelper.sendResponse(res, httpStatus.NOT_FOUND, false, null, errors, errors.email, null);
@@ -523,6 +524,7 @@ userController.Login = async (req, res, next) => {
       }
       // Check Password
       const isMatch = await bcrypt.compare(password, user.password);
+      console.log(isMatch);
       if (isMatch) {
         let success = true;
         let responseData = { multi_fa: { google_authenticate: { is_authenticate: false }, email: { is_authenticate: false } } };

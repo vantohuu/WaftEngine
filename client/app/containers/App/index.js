@@ -34,6 +34,7 @@ const App = ({ location }) => (
       <Switch location={location}>
         <UserRoute path="/user" component={RoutesUser} />
         <AdminRoute path="/admin" component={RoutesAdmin} />
+  
         <Route path="/" component={RoutesPublic} />
       </Switch>
       <div id="modal-root" />

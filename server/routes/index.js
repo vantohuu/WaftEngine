@@ -60,4 +60,10 @@ router.use('/testimonial', testimonialRoutes);
 const adminDashboard = require('./api/adminDashboard');
 router.use('/dashboard', adminDashboard);
 
+const training = require('./api/training');
+router.use('/training', training);
+
+const nodes = require('./api/nodes');
+router.use('/nodes', nodes);
+
 module.exports = router;

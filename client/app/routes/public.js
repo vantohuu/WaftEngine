@@ -10,6 +10,9 @@ import ResetPasswordPage from '../containers/ResetPasswordPage/Loadable';
 import SignupUserPage from '../containers/SignupUserPage/Loadable';
 import Static from '../containers/StaticPages/static';
 import VerifyEmail from '../containers/VerifyEmail/Loadable';
+import AddAB from '../components/AddAB';
+import AddArray from '../components/AddArray';
+import SortArray from '../components/SortArray';
 
 const publicRoutes = [
   {
@@ -81,6 +84,21 @@ const publicRoutes = [
     exact: true,
     path: '/page/:key',
     component: Static,
+  },
+  {
+    exact: true,
+    path: '/addAB',
+    component: AddAB,
+  },
+  {
+    exact: true,
+    path: '/addArray',
+    component: AddArray,
+  },
+  {
+    exact: true,
+    path: '/sort',
+    component: SortArray,
   },
 ];
 
